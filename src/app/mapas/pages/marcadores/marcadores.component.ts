@@ -119,6 +119,10 @@ export class MarcadoresComponent implements AfterViewInit {
 
   }
 
-
+  borrarMarcador(i: number) {
+    this.marcadores[i].marker?.remove();
+    this.marcadores.splice(i, 1);
+    this.guardarMarcadoresLocalStorage();
+  }
 
 }
